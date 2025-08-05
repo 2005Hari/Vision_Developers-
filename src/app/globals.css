@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary-dark: #3a3a3a;
+  --color-warm-beige: #c4b59a;
+  --color-pure-white: #ffffff;
+  --color-light-grey: #f5f5f5;
+  --color-medium-grey: #666666;
+  --color-gold-star: #ffd700;
+
+  --font-nunito: 'Nunito', sans-serif;
+
+  --text-h1: 60px;
+  --text-h2: 40px;
+  --text-h3: 32px;
+  --text-body: 18px;
+  --text-nav: 16px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --radius-default: 4px;
+
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-nunito);
+    color: var(--color-primary-dark);
+    line-height: 1.6;
+    background-color: var(--color-pure-white);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-nunito);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-primary-dark);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+  }
+
+  p {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-medium-grey);
+  }
+
+  a {
+    transition: color 0.3s ease;
+  }
+
+  button {
+    transition: all 0.3s ease;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: var(--radius-default);
+    background-color: var(--color-pure-white);
+    color: var(--color-primary-dark);
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-warm-beige);
+    box-shadow: 0 0 0 2px rgba(var(--color-warm-beige), 0.2);
+  }
+
+  /* Specific base styles for the geometric triangle accent */
+  .geometric-triangle::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 1;
+  }
+}
