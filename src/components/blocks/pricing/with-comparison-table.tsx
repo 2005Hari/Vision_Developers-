@@ -1,12 +1,36 @@
 import { Fragment } from 'react'
 import { CheckIcon, MinusIcon } from '@heroicons/react/20/solid'
 
-const tiers = [
+type TierName = 'Starter' | 'Growth' | 'Scale';
+type TierValue = boolean | string;
+type TierValues = {
+  [key in TierName]: TierValue;
+};
+
+interface Tier {
+  name: TierName;
+  id: string;
+  href: string;
+  priceMonthly: string;
+  mostPopular: boolean;
+}
+
+const tiers: Tier[] = [
   { name: 'Starter', id: 'tier-starter', href: '#', priceMonthly: '$19', mostPopular: false },
   { name: 'Growth', id: 'tier-growth', href: '#', priceMonthly: '$49', mostPopular: true },
   { name: 'Scale', id: 'tier-scale', href: '#', priceMonthly: '$99', mostPopular: false },
 ]
-const sections = [
+interface Feature {
+  name: string;
+  tiers: TierValues;
+}
+
+interface Section {
+  name: string;
+  features: Feature[];
+}
+
+const sections: Section[] = [
   {
     name: 'Features',
     features: [
@@ -36,7 +60,7 @@ const sections = [
   },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -89,13 +113,13 @@ export default function WithComparisonTable() {
                   <li key={section.name}>
                     <ul role="list" className="space-y-4">
                       {section.features.map((feature) =>
-                        feature.tiers[tier.name] ? (
+                        feature.tiers[tier.name as keyof TierValues] ? (
                           <li key={feature.name} className="flex gap-x-3">
                             <CheckIcon aria-hidden="true" className="h-6 w-5 flex-none text-indigo-600" />
                             <span>
                               {feature.name}{' '}
-                              {typeof feature.tiers[tier.name] === 'string' ? (
-                                <span className="text-sm/6 text-gray-500">({feature.tiers[tier.name]})</span>
+                              {typeof feature.tiers[tier.name as keyof TierValues] === 'string' ? (
+                                <span className="text-sm/6 text-gray-500">({feature.tiers[tier.name as keyof TierValues]})</span>
                               ) : null}
                             </span>
                           </li>
@@ -189,18 +213,18 @@ export default function WithComparisonTable() {
                         </th>
                         {tiers.map((tier) => (
                           <td key={tier.id} className="px-6 py-4 xl:px-8">
-                            {typeof feature.tiers[tier.name] === 'string' ? (
-                              <div className="text-center text-sm/6 text-gray-500">{feature.tiers[tier.name]}</div>
+                            {typeof feature.tiers[tier.name as keyof TierValues] === 'string' ? (
+                              <div className="text-center text-sm/6 text-gray-500">{feature.tiers[tier.name as keyof TierValues]}</div>
                             ) : (
                               <>
-                                {feature.tiers[tier.name] === true ? (
+                                {feature.tiers[tier.name as keyof TierValues] === true ? (
                                   <CheckIcon aria-hidden="true" className="mx-auto size-5 text-indigo-600" />
                                 ) : (
                                   <MinusIcon aria-hidden="true" className="mx-auto size-5 text-gray-400" />
                                 )}
 
                                 <span className="sr-only">
-                                  {feature.tiers[tier.name] === true ? 'Included' : 'Not included'} in {tier.name}
+                                  {feature.tiers[tier.name as keyof TierValues] === true ? 'Included' : 'Not included'} in {tier.name}
                                 </span>
                               </>
                             )}

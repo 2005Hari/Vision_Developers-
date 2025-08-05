@@ -2,7 +2,30 @@ import { Fragment } from 'react'
 import { CheckIcon, MinusIcon, PlusIcon } from '@heroicons/react/16/solid'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 
-const tiers = [
+// Define types for our tiers and features
+type TierName = 'Starter' | 'Growth' | 'Scale';
+type TierValue = boolean | string;
+
+interface TierValues {
+  Starter: TierValue;
+  Growth: TierValue;
+  Scale: TierValue;
+}
+
+interface Highlight {
+  description: string;
+  disabled?: boolean;
+}
+
+interface Tier {
+  name: TierName;
+  description: string;
+  priceMonthly: string;
+  href: string;
+  highlights: Highlight[];
+}
+
+const tiers: Tier[] = [
   {
     name: 'Starter',
     description: 'Everything you need to get started.',
@@ -46,7 +69,17 @@ const tiers = [
     ],
   },
 ]
-const sections = [
+interface Feature {
+  name: string;
+  tiers: TierValues;
+}
+
+interface Section {
+  name: string;
+  features: Feature[];
+}
+
+const sections: Section[] = [
   {
     name: 'Features',
     features: [
@@ -225,21 +258,21 @@ export default function ThreeTiersWithLogosAndFeatureComparison() {
                   </th>
                   {tiers.map((tier) => (
                     <td key={tier.name} className="p-4 max-sm:text-center">
-                      {typeof feature.tiers[tier.name] === 'string' ? (
+                      {typeof feature.tiers[tier.name as keyof TierValues] === 'string' ? (
                         <>
                           <span className="sr-only">{tier.name} includes:</span>
-                          <span className="text-sm/6 text-gray-950">{feature.tiers[tier.name]}</span>
+                          <span className="text-sm/6 text-gray-950">{feature.tiers[tier.name as keyof TierValues]}</span>
                         </>
                       ) : (
                         <>
-                          {feature.tiers[tier.name] === true ? (
+                          {feature.tiers[tier.name as keyof TierValues] === true ? (
                             <CheckIcon aria-hidden="true" className="inline-block size-4 fill-green-600" />
                           ) : (
                             <MinusIcon aria-hidden="true" className="inline-block size-4 fill-gray-400" />
                           )}
 
                           <span className="sr-only">
-                            {feature.tiers[tier.name] === true
+                            {feature.tiers[tier.name as keyof TierValues] === true
                               ? `Included in ${tier.name}`
                               : `Not included in ${tier.name}`}
                           </span>
@@ -285,17 +318,17 @@ export default function ThreeTiersWithLogosAndFeatureComparison() {
                         >
                           <dt className="text-sm/6 font-normal text-gray-600">{feature.name}</dt>
                           <dd className="text-center">
-                            {typeof feature.tiers[tier.name] === 'string' ? (
-                              <span className="text-sm/6 text-gray-950">{feature.tiers[tier.name]}</span>
+                            {typeof feature.tiers[tier.name as keyof TierValues] === 'string' ? (
+                              <span className="text-sm/6 text-gray-950">{feature.tiers[tier.name as keyof TierValues]}</span>
                             ) : (
                               <>
-                                {feature.tiers[tier.name] === true ? (
+                                {feature.tiers[tier.name as keyof TierValues] === true ? (
                                   <CheckIcon aria-hidden="true" className="inline-block size-4 fill-green-600" />
                                 ) : (
                                   <MinusIcon aria-hidden="true" className="inline-block size-4 fill-gray-400" />
                                 )}
 
-                                <span className="sr-only">{feature.tiers[tier.name] === true ? 'Yes' : 'No'}</span>
+                                <span className="sr-only">{feature.tiers[tier.name as keyof TierValues] === true ? 'Yes' : 'No'}</span>
                               </>
                             )}
                           </dd>

@@ -1,6 +1,16 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 
-const tiers = [
+interface Tier {
+  name: string;
+  id: string;
+  href: string;
+  priceMonthly: string;
+  description: string;
+  features: string[];
+  featured: boolean;
+}
+
+const tiers: Tier[] = [
   {
     name: 'Personal',
     id: 'tier-personal',
@@ -28,7 +38,7 @@ const tiers = [
   },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(' ')
 }
 
