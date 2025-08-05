@@ -1,0 +1,19 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/95e4e_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_c8d51e3f._.js",
+    "static/chunks/95e4e_next_dist_compiled_5ea86d32._.js",
+    "static/chunks/95e4e_next_dist_client_b314a040._.js",
+    "static/chunks/95e4e_next_dist_c0078323._.js",
+    "static/chunks/95e4e_@swc_helpers_cjs_efe9e610._.js",
+    "static/chunks/Downloads_Premium-Real-Estate-Website_-codebase_e69f0d32._.js",
+    "static/chunks/Downloads_Premium-Real-Estate-Website_-codebase_ec79e070._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}

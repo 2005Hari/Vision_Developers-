@@ -11,7 +11,7 @@ type ReporterProps = {
 export default function ErrorReporter({ error, reset }: ReporterProps) {
   /* ─ instrumentation shared by every route ─ */
   const lastOverlayMsg = useRef("");
-  const pollRef = useRef<NodeJS.Timeout>();
+  const pollRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const inIframe = window.parent !== window;
@@ -64,12 +64,14 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
 
     window.addEventListener("error", onError);
     window.addEventListener("unhandledrejection", onReject);
-    pollRef.current = setInterval(pollOverlay, 1000);
+    pollRef.current = setInterval(pollOverlay, 1000) as NodeJS.Timeout;
 
     return () => {
       window.removeEventListener("error", onError);
       window.removeEventListener("unhandledrejection", onReject);
-      pollRef.current && clearInterval(pollRef.current);
+      if (pollRef.current) {
+        clearInterval(pollRef.current);
+      }
     };
   }, []);
 
@@ -97,7 +99,7 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
 
   /* ─ global-error UI ─ */
   return (
-            <div className="min-h-screen bg-white text-gray-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4">
       <div className="max-w-md w-full text-center space-y-6">
         <div className="space-y-2">
           <h1 className="text-2xl font-bold text-destructive">
