@@ -1,16 +1,16 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/api/contact/route": "app/api/contact/route.js",
-  "/contact-us/page": "app/contact-us/page.js",
   "/3d-walkthrough/page": "app/3d-walkthrough/page.js",
-  "/new-home-designs-search/page": "app/new-home-designs-search/page.js",
   "/about-us/page": "app/about-us/page.js",
-  "/our-services/custom-new-homes/page": "app/our-services/custom-new-homes/page.js",
-  "/our-services/sub-divisions/page": "app/our-services/sub-divisions/page.js",
-  "/our-services/multi-dwelling/page": "app/our-services/multi-dwelling/page.js",
-  "/our-services/page": "app/our-services/page.js",
-  "/page": "app/page.js",
   "/our-services/knockdown-rebuild/page": "app/our-services/knockdown-rebuild/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/new-home-designs-search/page": "app/new-home-designs-search/page.js",
+  "/our-services/custom-new-homes/page": "app/our-services/custom-new-homes/page.js",
+  "/page": "app/page.js",
+  "/our-services/page": "app/our-services/page.js",
+  "/house-land-search/page": "app/house-land-search/page.js",
   "/tools/page": "app/tools/page.js",
-  "/house-land-search/page": "app/house-land-search/page.js"
+  "/our-services/sub-divisions/page": "app/our-services/sub-divisions/page.js",
+  "/our-services/multi-dwelling/page": "app/our-services/multi-dwelling/page.js"
 }

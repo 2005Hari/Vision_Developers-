@@ -105,7 +105,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Aditya",
+    "outputFileTracingRoot": "C:\\Users\\Aditya\\OneDrive",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -288,11 +288,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\Aditya"
+      "root": "C:\\Users\\Aditya\\OneDrive"
     }
   },
-  "appDir": "C:\\Users\\Aditya\\Downloads\\Vision developers",
-  "relativeAppDir": "Downloads\\Vision developers",
+  "appDir": "C:\\Users\\Aditya\\OneDrive\\Desktop\\Vision_Developers-",
+  "relativeAppDir": "Desktop\\Vision_Developers-",
   "files": [
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",
