@@ -6,7 +6,7 @@ import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
 import { Label } from "../../components/ui/label";
 import { Building2, Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
-import Navigation from "@/components/sections/Navigation";
+import Navigation from "../../components/sections/Navigation";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({

@@ -4,10 +4,10 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Home, Building, Users, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import Carousel from "@/components/ui/carousel";
-import Navigation from "@/components/sections/Navigation";
-import Footer from "@/components/sections/Footer";
+import Navigation from "../../components/sections/Navigation";
+import Footer from "../../components/sections/Footer";
 
 export default function OurServicesPage() {
   const router = useRouter();
