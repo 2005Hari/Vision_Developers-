@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Manrope } from "next/font/google";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+// Removed RoughNotation imports due to package conflict
 import { animate, stagger, useInView } from "motion/react";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "700"] });
@@ -18,48 +18,17 @@ export function PlayfulHeroSection() {
     <div ref={ref} className="mb-20 w-full bg-gray-50 dark:bg-neutral-800">
       <div className="mx-auto grid max-h-[50rem] max-w-7xl grid-cols-1 items-start gap-10 overflow-hidden pt-10 sm:grid-cols-2 md:max-h-[40rem] md:pt-20 lg:grid-cols-3">
         <div className="px-4 py-10 md:px-8 md:py-10 lg:col-span-2">
-          <RoughNotationGroup show={isInView}>
-            <h2
-              className={cn(
-                "text-center text-2xl font-bold tracking-tight text-neutral-900 sm:text-left sm:text-4xl lg:text-7xl dark:text-neutral-50",
-                manrope.className
-              )}
-            >
-              Your favourite{" "}
-              <RoughNotation
-                type="highlight"
-                animationDuration={2000}
-                iterations={3}
-                color="#facc1580"
-                multiline
-              >
-                <span className="text-currentColor">productivity tool</span>
-              </RoughNotation>{" "}
-              is now available for{" "}
-              <RoughNotation
-                type="underline"
-                animationDuration={2000}
-                iterations={10}
-                color="#facc15"
-              >
-                mobile
-              </RoughNotation>
-            </h2>
-            <p className="mt-4 max-w-2xl text-center text-sm text-neutral-500 sm:text-left md:mt-10 md:text-lg dark:text-neutral-400">
-              Aceternity AI bring you the best productivity tools for your
-              desktop, now available on mobile. Download the app now to avail
-              additional{" "}
-              <RoughNotation
-                type="underline"
-                animationDuration={2000}
-                iterations={3}
-                color="#facc15"
-              >
-                20% discount
-              </RoughNotation>{" "}
-              and take your productivity to the next level.
-            </p>
-          </RoughNotationGroup>
+          <h2
+            className={cn(
+              "text-center text-2xl font-bold tracking-tight text-neutral-900 sm:text-left sm:text-4xl lg:text-7xl dark:text-neutral-50",
+              manrope.className
+            )}
+          >
+            Your favourite <span className="text-currentColor font-bold">productivity tool</span> is now available for <span className="underline text-yellow-500">mobile</span>
+          </h2>
+          <p className="mt-4 max-w-2xl text-center text-sm text-neutral-500 sm:text-left md:mt-10 md:text-lg dark:text-neutral-400">
+            Aceternity AI bring you the best productivity tools for your desktop, now available on mobile. Download the app now to avail additional <span className="underline text-yellow-500">20% discount</span> and take your productivity to the next level.
+          </p>
           <div className="mt-10 flex flex-col items-center gap-4 [perspective:800px] sm:flex-row">
             <button className="w-full origin-left rounded-lg bg-yellow-400 px-4 py-2 text-base font-bold text-black transition duration-200 hover:shadow-lg hover:[transform:rotateX(10deg)] sm:w-auto">
               Get the app

@@ -1,0 +1,115 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/3d-walkthrough",
+      "regex": "^/3d\\-walkthrough(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/3d\\-walkthrough(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/house-land-search",
+      "regex": "^/house\\-land\\-search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/house\\-land\\-search(?:/)?$"
+    },
+    {
+      "page": "/new-home-designs-search",
+      "regex": "^/new\\-home\\-designs\\-search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/new\\-home\\-designs\\-search(?:/)?$"
+    },
+    {
+      "page": "/our-services",
+      "regex": "^/our\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-services(?:/)?$"
+    },
+    {
+      "page": "/our-services/custom-new-homes",
+      "regex": "^/our\\-services/custom\\-new\\-homes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-services/custom\\-new\\-homes(?:/)?$"
+    },
+    {
+      "page": "/our-services/knockdown-rebuild",
+      "regex": "^/our\\-services/knockdown\\-rebuild(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-services/knockdown\\-rebuild(?:/)?$"
+    },
+    {
+      "page": "/our-services/multi-dwelling",
+      "regex": "^/our\\-services/multi\\-dwelling(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-services/multi\\-dwelling(?:/)?$"
+    },
+    {
+      "page": "/our-services/sub-divisions",
+      "regex": "^/our\\-services/sub\\-divisions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-services/sub\\-divisions(?:/)?$"
+    },
+    {
+      "page": "/tools",
+      "regex": "^/tools(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tools(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}

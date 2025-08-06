@@ -1,0 +1,16 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/contact/route": "/api/contact",
+  "/contact-us/page": "/contact-us",
+  "/3d-walkthrough/page": "/3d-walkthrough",
+  "/new-home-designs-search/page": "/new-home-designs-search",
+  "/about-us/page": "/about-us",
+  "/our-services/custom-new-homes/page": "/our-services/custom-new-homes",
+  "/our-services/sub-divisions/page": "/our-services/sub-divisions",
+  "/our-services/multi-dwelling/page": "/our-services/multi-dwelling",
+  "/our-services/page": "/our-services",
+  "/page": "/",
+  "/our-services/knockdown-rebuild/page": "/our-services/knockdown-rebuild",
+  "/tools/page": "/tools",
+  "/house-land-search/page": "/house-land-search"
+}

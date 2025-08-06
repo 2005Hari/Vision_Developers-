@@ -19,7 +19,6 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           "disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 transition-[color,box-shadow]",
           className
         )}
-        ref={ref}
         {...props}
       />
     );

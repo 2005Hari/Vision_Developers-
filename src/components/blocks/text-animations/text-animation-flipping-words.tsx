@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, HTMLMotionProps } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import type { ComponentProps } from "react";
 import React, { useEffect, useState } from "react";
 
 const FlippingText = ({
