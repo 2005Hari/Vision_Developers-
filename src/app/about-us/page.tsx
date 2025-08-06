@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ChevronRight, MapPin, Clock, Award, Users, Heart } from 'lucide-react';
-import Navigation from '@/components/sections/Navigation';
+import Navigation from '../../components/sections/Navigation';
 
 const teamMembers = [
   {
