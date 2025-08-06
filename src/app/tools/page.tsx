@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Navigation from "@/components/sections/Navigation";
-import Footer from "@/components/sections/Footer";
+import Navigation from "../../components/sections/Navigation";
+import Footer from "../../components/sections/Footer";
 import { Calculator, TrendingUp, Home, BarChart3, FileText, Search, X, ArrowLeft } from "lucide-react";
 
 export default function Tools() {
