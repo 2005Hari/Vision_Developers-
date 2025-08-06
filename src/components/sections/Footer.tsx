@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const searchLinks = [
@@ -107,22 +107,12 @@ const Footer = () => {
           <div className="text-[13px] text-center md:text-left flex-1">
             © Vision Developers 2025
           </div>
-          <div className="flex gap-3 order-first md:order-none">
-            <Link href="https://www.facebook.com/fortuneliving2016/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <div className="w-9 h-9 border-2 border-primary-dark rounded-full flex items-center justify-center hover:bg-primary-dark group transition-colors duration-300">
-                <Facebook className="h-4 w-4 text-primary-dark group-hover:text-white transition-colors duration-300" />
-              </div>
-            </Link>
-            <Link href="https://www.instagram.com/fortune.living/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <div className="w-9 h-9 border-2 border-primary-dark rounded-full flex items-center justify-center hover:bg-primary-dark group transition-colors duration-300">
-                <Instagram className="h-4 w-4 text-primary-dark group-hover:text-white transition-colors duration-300" />
-              </div>
-            </Link>
-          </div>
+          {/* Social media links removed */}
+          <div className="flex gap-3 order-first md:order-none"></div>
           <div className="text-[13px] text-center md:text-right flex-1">
             Website managed by{' '}
-            <Link href="https://pkdesign.com.au/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-dark transition-colors duration-300">
-              PK Design
+            <Link href="https://www.visiondevelopers.com" className="text-primary-dark hover:underline transition-colors duration-300">
+              Vision Developers
             </Link>
           </div>
         </div>
