@@ -1,5 +1,5 @@
-import Navigation from "@/components/sections/Navigation";
-import Footer from "@/components/sections/Footer";
+import Navigation from "../../components/sections/Navigation";
+import Footer from "../../components/sections/Footer";
 
 export default function HouseLandSearch() {
   return (
